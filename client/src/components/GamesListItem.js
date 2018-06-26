@@ -12,19 +12,12 @@ class Book extends Component {
   //   this.props.onLike(this.state);
   // }
 
-  loadGame = () => {
-
-  }
-
   render() {
     const {game} = this.props
     return (
       <div className="GamesListItem">
-
-        <h3>{`Game ${game.id} between Players 1 and 2, turn ${game.moves.size}`}</h4>
-        <Link to={`/games/${game.id}`}>
-          <button onClick={ this.loadGame }>Load Game</button>
-        </Link>
+        <h3>{`Game ${game.id} between Players 1 and 2, on turn ${game.moves.size}`}</h4>
+        <Link to={`/games/${game.id}`}>Load Game</Link>
       </div>
     )
   }
@@ -39,10 +32,5 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    loadGame: loadGame
-  }, dispatch)
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Game);
+export default connect(mapStateToProps)(Game);

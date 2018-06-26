@@ -14,9 +14,9 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Route path="/" component={Home} />
-          <Route exact path="/games" component={GamesList} />
-          <Route exact path="/games/new" component={GameArea} />
-          <Route exact path="/games/:gameId" component={GameArea} />
+          <Route exact path="/games" component={GamesPage} />
+          <Route exact path="/games/new" component={NewGame} />
+          <Route exact path="/games/:gameId" component={CurrentGame} />
         </div>
       </Router>
       // <div className="App">

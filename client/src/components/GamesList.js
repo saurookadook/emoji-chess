@@ -26,5 +26,16 @@ const GamesList = ({ gamesList }) => {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    games: state.games
+  }
+}
 
-export default BooksList;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    fetchGames: fetchGames
+  }, dispatch)
+}
+
+export default (mapStateToProps, mapDispatchToProps)(GamesList);
