@@ -1,4 +1,4 @@
 class MoveSerializer < ActiveModel::Serializer
-  attributes :id, :position, :player, :turn
+  attributes :id, :turn, :player, :piece, :position 
   belongs_to :game
 end
