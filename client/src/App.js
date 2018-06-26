@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'; // Switch?
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // Switch?
 import  NavBar  from './components/NavBar.js';
 import { Home } from './components/Home.js';
 import { connect } from 'react-redux';
@@ -12,11 +12,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          // <Switch> ?
           <NavBar />
           <Route exact path="/" component={Home} />
-          <Route exact path="/games" />
-          // </ Switch>
         </div>
       </Router>
       // <div className="App">
