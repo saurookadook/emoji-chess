@@ -11,17 +11,6 @@ class Move < ApplicationRecord
     ["", "", "", "", "", "", "", ""]
   ]
 
-  CHESS_BOARD = [
-    ["", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", ""]
-  ]
-
   def valid_move?(move)
     [id: number, position: ??, ]
     # sudo code
@@ -74,7 +63,7 @@ class Move < ApplicationRecord
   end
 
   def king_moves(move)
-    # 
+    #
   end
 
   def check?(updated_move)
